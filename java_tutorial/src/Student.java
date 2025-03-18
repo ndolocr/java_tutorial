@@ -3,6 +3,7 @@ public class Student {
     String name;
     String adminNo;
     String studentClass;
+    static int noOfStudents;
 
 
     Student(int age, String name, String adminNo, String studentClass){
@@ -10,6 +11,7 @@ public class Student {
         this.name = name;
         this.adminNo = adminNo;
         this.studentClass = studentClass;
+        noOfStudents++;
     }
 
     // SETTERS
@@ -46,6 +48,10 @@ public class Student {
         return this.studentClass;
     }
 
+    static void showNoOfStudents(){
+        System.out.println("No of Students : "+ noOfStudents);
+    }
+
     public static void main(String [] args){
         Student studentOne = new Student(4, "Joan Kamau", "001", "1");
         Student studentTwo = new Student(3, "Charles Kapala", "002", "1");
@@ -78,6 +84,6 @@ public class Student {
             System.out.println("--------------------------------------------");
         }
 
-
+        Student.showNoOfStudents();
     }
 }
