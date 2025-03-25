@@ -17,11 +17,13 @@ public class Stack {
 
     // Method to pop out item
     public int pop(){
+        int returnValue;
         if(this.val < 0){
             System.out.println("End of Stack!");
+            returnValue = 0;
         }else{
-         return this.stack[this.val--];
+            returnValue = this.stack[this.val--];
         }
-
+        return returnValue;
     }
 }
