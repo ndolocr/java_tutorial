@@ -17,11 +17,11 @@ public class Cylinder extends Circle{
         return height;
     }
 
-    public double getVolume(){
+    public double getCylinderVolume(){
         return this.getArea() * this.height;
     }
 
-    public double getSurfaceArea(){
+    public double getCylinderSurfaceArea(){
         double areaOfCircles = this.getArea() * 2;
         double rectangleLength = this.getPerimeter();
         double rectangleArea = rectangleLength * this.height;
